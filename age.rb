@@ -12,9 +12,10 @@ contact_data= [["ana@email.com","123 Main St", "555-123-4567"],["avion@email","4
 
 contacts = {"Analyn Cajocson"=>{}, "Avion School"=>{}}
 data = ["email","address","phone"]
-contact_data[0].each_with_index{|val,index| contacts["Analyn Cajocson"][data[index]] = val };
 
-contact_data[1].each_with_index{|val,index| contacts["Avion School"][data[index]] = val };
+
+contacts.keys.each_with_index{|v,i| contact_data[i].each_with_index{|val,index| contacts[v][data[index]] = val }}
+
 
 
 print "#{contacts}"
