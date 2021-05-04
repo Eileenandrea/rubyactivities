@@ -1,6 +1,6 @@
 class Confection
     def baking
-         "Baking at 350 degrees"
+         "Baking at 350 degrees for 25 minutes"
     end
 end
 
