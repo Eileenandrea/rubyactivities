@@ -11,7 +11,7 @@ print "\n #{new_hash} \n"
 contact_data= [["ana@email.com","123 Main St", "555-123-4567"],["avion@email","404 Not Found Dr.","123-234-3454"]]
 
 contacts = {"Analyn Cajocson"=>{}, "Avion School"=>{}}
-data = ["email","address","phone"]
+data = [:email,:address,:phone]
 
 
 contacts.keys.each_with_index{|v,i| contact_data[i].each_with_index{|val,index| contacts[v][data[index]] = val }}
@@ -19,10 +19,11 @@ contacts.keys.each_with_index{|v,i| contact_data[i].each_with_index{|val,index| 
 
 
 print "#{contacts}"
+
 #4
 print "\n How old are you? "
 age = gets
 
 arr_year = [10,20,30,40];
 
-arr_year.each{|n| print "\n In "; print "#{n}"; print "years you will be "; print "#{n+age.to_f} \n"}
+arr_year.each{|n| print "\n In "; print "#{n}"; print "years you will be "; print "#{n+age.to_i} \n"}
