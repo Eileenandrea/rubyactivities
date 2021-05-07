@@ -1,10 +1,14 @@
 def count_pos_sum_neg(arr)
-    positives = arr.select{|num| num > 0 }
-    negatives = arr.select{|num| num < 0 }
+    if arr.length > 0
+        positives = arr.select{|num| num > 0 }
+        negatives = arr.select{|num| num < 0 }
 
-    return [positives.count, negatives.sum]
+        return [positives.count, negatives.sum]
+    else
+        return []
+    end
 
 end
 
-print count_pos_sum_neg([0,1,2,3,4,5,6,7,8,9,10,-11,-12,-13,-14,-15])
+print count_pos_sum_neg([])
 puts "\n"
