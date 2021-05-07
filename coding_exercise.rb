@@ -1,5 +1,5 @@
 def count_pos_sum_neg(arr)
-    positives = arr.select{|num| num > -1 }
+    positives = arr.select{|num| num > 0 }
     negatives = arr.select{|num| num < 0 }
 
     return [positives.count, negatives.sum]
