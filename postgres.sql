@@ -3,13 +3,13 @@ CREATE TABLE students (
     first_name varchar(255)  NOT NULL,
   	middle_name VARCHAR(255) DEFAULT 'Blank',
     last_name varchar(255)  NOT NULL,
-    age varchar(255) NOT NULL,
+    age int NOT NULL,
     LOCATION varchar(255) NOT NULL
 );
 INSERT INTO students (id, first_name, last_name, age, LOCATION)
 VALUES ('1','Juan','Cruz','18','Manila');
 INSERT INTO students (id, first_name, last_name, age, LOCATION)
-VALUES ('2','Anne','Wall','','Manila');
+VALUES ('2','Anne','Wall','20','Manila');
 INSERT INTO students (id, first_name, last_name, age, LOCATION)
 VALUES ('3','Theresa','Joseph','21','Manila');
 INSERT INTO students (id, first_name, last_name, age, LOCATION)
