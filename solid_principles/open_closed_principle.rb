@@ -9,17 +9,11 @@ class Weight
       
         case unit
             when 'kg'
-               new_weight = weight 
-               new_weight_with_unit = new_weight + ' kg'
-               puts "#{@weight} is #{new_weight_with_unit}"
+               puts "#{@weight} is #{@weight}"
             when 'ibs'
-                new_weight = IbsConvert.new.convert(weight.to_f)
-                new_weight_with_unit = new_weight.to_s + ' kg'
-               puts "#{@weight} is #{new_weight_with_unit}"
+                puts IbsConvert.new.convert(weight.to_f)
             when 'g'
-                new_weight = GramsConvert.new.convert(weight.to_f)
-                new_weight_with_unit = new_weight.to_s + ' kg'  
-               puts "#{@weight} is #{new_weight_with_unit}"
+               puts GramsConvert.new.convert(weight.to_f)
         end
     
     end
@@ -27,12 +21,14 @@ end
 
 class IbsConvert
     def convert(weight)
-        weight / 2.205
+        new_weight_with_unit = (weight / 2.205).to_s + ' kg'
+        return "#{weight} Ibs is #{new_weight_with_unit}"
     end
 end
 class GramsConvert
     def convert(weight)
-        weight / 1000
+        new_weight_with_unit = ( weight / 1000).to_s + ' kg'
+        return "#{weight} g is #{new_weight_with_unit}"
     end
 end
 
